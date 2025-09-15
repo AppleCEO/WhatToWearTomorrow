@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - WeatherResponse
-struct WeatherResponse: Codable {
+struct ForecastResponse: Codable {
     let cod: String
     let message, cnt: Int
     let list: [List]
