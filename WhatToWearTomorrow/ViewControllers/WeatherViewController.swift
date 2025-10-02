@@ -6,14 +6,18 @@
 //
 
 import UIKit
+import ReactorKit
 
-class WeatherViewController: UIViewController {
+class WeatherViewController: UIViewController, View {
+    var disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    func bind(reactor: WeatherViewReactor) {
+        
+    }
 }
 
