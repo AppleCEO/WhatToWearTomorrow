@@ -10,15 +10,15 @@ import RxSwift
 
 final class OnboardingViewReactor: Reactor {
     enum Action {
-        
+        case nextButtonTaped
     }
     
     enum Mutation {
-        case setQuery(String?)
+        case showLocationAuthAlert
+        case presentMainScreen
     }
     
     struct State {
-        var query: String?
         
     }
     
@@ -26,5 +26,20 @@ final class OnboardingViewReactor: Reactor {
     
     init() {
         self.initialState = State()
+    }
+    
+    func mutate(action: Action) -> Observable<Mutation> {
+        switch action {
+        case let .nextButtonTaped:
+            return Observable.just(Mutation.showLocationAuthAlert)
+        }
+    }
+    
+    func reduce(state: State, mutation: Mutation) -> State {
+        switch mutation {
+        case let .showLocationAuthAlert:
+            
+        case let .presentMainScreen:
+        }
     }
 }
